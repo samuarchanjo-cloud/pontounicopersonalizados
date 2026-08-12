@@ -6,7 +6,7 @@ const categoryDefinitions = [
   { slug:"garrafas", name:"Garrafas", folder:"garrafa", cover:"garrafa-infantil-patrulha-canina", keywords:["garrafa","térmica","squeeze"] },
   { slug:"infantil", name:"Infantil", folder:"infantil", cover:"mochila_ursinho_azul", keywords:["infantil","criança","escolar"] },
   { slug:"necessaires", name:"Necessaires", folder:"necessaeire", cover:"necessaeire-personalizada", keywords:["necessaire","carteira","estojo"] },
-  { slug:"papelaria", name:"Papelaria", folder:"papelaria", cover:"agenda", keywords:["agenda","caderno","caderneta"] },
+  { slug:"papelaria", name:"Encadernação", folder:"papelaria", cover:"agenda", keywords:["agenda","caderno","caderneta"] },
   { slug:"presentes", name:"Presentes", folder:"presentes", cover:"caneca-personalizada-2", keywords:["presente","lembrança"] },
 ];
 
@@ -83,7 +83,7 @@ export const catalogCategories = categoryDefinitions.map((category) => ({
 export const categories = [
   { name:"Canecas", slug:"canecas", image:"/assets/categoria-canecas.webp" },
   { name:"Garrafas", slug:"garrafas", image:"/assets/categoria-garrafas.webp" },
-  { name:"Papelaria", slug:"papelaria", image:"/assets/categoria-papelaria.webp" },
+  { name:"Encadernação", slug:"papelaria", image:"/assets/categoria-papelaria.webp" },
   { name:"Bolsas", slug:"bolsas", image:"/assets/categoria-bolsas.webp" },
   { name:"Necessaires", slug:"necessaires", image:"/assets/categoria-necessaires.webp" },
   { name:"Infantil", slug:"infantil", image:"/assets/categoria-infantil.webp" },
