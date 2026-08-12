@@ -24,7 +24,10 @@ export function SiteHeader({ catalog = false }) {
       <div className="announcement" aria-label="Diferenciais rápidos"><span>♡ Feito à mão com cuidado</span><span>✦ Enviamos para todo o Brasil</span><a href={whatsappUrl(generalMessage)} target="_blank" rel="noreferrer">Atendimento pelo WhatsApp</a></div>
       <header className={`site-header ${catalog ? "catalog-header" : ""}`}>
         <div className="header-inner">
-          <Link className="brand" to="/" aria-label="Ponto Único Personalizados — início"><img src="/assets/logo/logo.jpeg" alt="Ponto Único Personalizados" width="150" height="150" /></Link>
+          <Link className="brand" to="/" aria-label="Ponto Único — início">
+            <span className="brand-rainbow" aria-hidden="true">🌈</span>
+            <span className="brand-name">Ponto Único</span>
+          </Link>
           <nav className={`main-nav ${open ? "is-open" : ""}`} aria-label="Navegação principal">
             <Link to="/" onClick={() => setOpen(false)}>Início</Link><Link to="/#personalizados" onClick={() => setOpen(false)}>Personalizados</Link><Link to="/#como-funciona" onClick={() => setOpen(false)}>Como funciona</Link><Link to="/#trabalhos" onClick={() => setOpen(false)}>Trabalhos</Link><Link to="/#sobre" onClick={() => setOpen(false)}>Sobre nós</Link><Link to="/#contato" onClick={() => setOpen(false)}>Contato</Link>
           </nav>
@@ -38,4 +41,3 @@ export function SiteHeader({ catalog = false }) {
     </>
   );
 }
-

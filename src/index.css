@@ -12,8 +12,9 @@ img { display:block; max-width:100%; }
 .announcement { min-height:32px; display:flex; align-items:center; justify-content:center; gap:38px; padding:5px 20px; background:linear-gradient(90deg,#ffd9e4,#ffe9ee,#ffd9e4); color:#6a321e; font-size:.78rem; font-weight:700; letter-spacing:.02em; }
 .site-header { position:sticky; top:0; z-index:50; background:rgba(255,255,255,.94); backdrop-filter:blur(16px); border-bottom:1px solid rgba(91,40,21,.08); }
 .header-inner { width:min(1240px, calc(100% - 40px)); height:82px; margin:auto; display:flex; align-items:center; gap:42px; }
-.brand { width:146px; flex:none; height:74px; display:flex; align-items:center; justify-content:center; padding:3px; }
-.brand img { width:100%; height:100%; object-fit:contain; object-position:center; }
+.brand { width:190px; flex:none; height:74px; display:flex; align-items:center; justify-content:flex-start; gap:8px; padding:3px; }
+.brand-rainbow { flex:none; font-size:2rem; line-height:1; filter:saturate(1.08); transform:rotate(-4deg); }
+.brand-name { display:inline-block; font-family:var(--font-display),Georgia,serif; font-size:1.75rem; line-height:.9; font-weight:800; letter-spacing:-.035em; white-space:nowrap; background:linear-gradient(90deg,#ed5b83 0 28%,#e5a528 40%,#49aab8 62%,#9464bc 82%,#ed5b83 100%); color:transparent; -webkit-background-clip:text; background-clip:text; }
 .main-nav { display:flex; align-items:center; justify-content:center; gap:30px; flex:1; font-size:.9rem; font-weight:700; }
 .main-nav a { position:relative; padding:10px 0; }
 .main-nav a::after { content:""; position:absolute; left:50%; bottom:2px; width:0; height:2px; border-radius:2px; background:var(--pink); transition:.25s; transform:translateX(-50%); }
@@ -117,6 +118,14 @@ h1,h2,h3,p { margin-top:0; }
 /* Produto */
 .product-page { padding-block:28px 80px; }.breadcrumbs { display:flex; gap:8px; align-items:center; padding-bottom:25px; color:#8a6758; font-size:.75rem; }.product-detail-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:58px; align-items:start; }.main-product-photo { aspect-ratio:1/1; overflow:hidden; border-radius:28px; background:#fff3f1; border:1px solid var(--line); }.main-product-photo img { width:100%; height:100%; object-fit:cover; }.gallery-note { padding:12px 8px; text-align:center; color:#89685a; font-size:.7rem; }.product-detail-copy h1 { font-size:clamp(2.8rem,5vw,4.2rem); }.product-description { color:#765142; line-height:1.7; }.consult-price { display:block; margin:22px 0; font-size:1.05rem; }.detail-benefits { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:25px; }.detail-benefits span { padding:8px 11px; border-radius:999px; background:#fff0f3; font-size:.68rem; font-weight:800; }.product-detail-copy fieldset { margin:0 0 20px; padding:0; border:0; }.product-detail-copy legend,.quantity-field,.detail-field { display:block; margin-bottom:10px; font-weight:800; font-size:.82rem; }.option-pills { display:flex; flex-wrap:wrap; gap:8px; }.option-pills button { padding:9px 14px; border:1px solid var(--line); border-radius:999px; background:#fff; color:var(--brown); }.option-pills button.active { color:#fff; border-color:var(--pink); background:var(--pink); }.quantity-field input { display:block; width:90px; margin-top:7px; padding:10px; border:1px solid var(--line); border-radius:12px; }.detail-field textarea { display:block; width:100%; resize:vertical; margin-top:7px; padding:13px; border:1px solid var(--line); border-radius:14px; outline-color:var(--pink); }.product-detail-copy>.primary-button { margin-top:8px; }.product-detail-copy>.secondary-button { margin-top:10px; }
 
+@media (max-width:1100px) and (min-width:901px) {
+  .header-inner { gap:18px; }
+  .brand { width:156px; }
+  .brand-rainbow { font-size:1.55rem; }
+  .brand-name { font-size:1.38rem; }
+  .main-nav { gap:16px; font-size:.78rem; }
+}
+
 @media (max-width:1000px) {
   .header-inner { gap:18px; }.main-nav { gap:16px; font-size:.78rem; }.category-grid { grid-template-columns:repeat(3,1fr); }.trust-strip { grid-template-columns:repeat(2,1fr); }.trust-item:nth-child(2) { border:0; }.catalog-layout { grid-template-columns:1fr; }.product-grid { grid-template-columns:repeat(3,1fr); }.quote-panel { position:fixed; z-index:70; inset:auto 16px 16px; max-height:78vh; overflow:auto; transform:translateY(calc(100% + 40px)); transition:transform .3s; }.quote-panel.is-open { transform:none; }.quote-close { display:block; position:absolute; right:14px; top:10px; border:0; background:transparent; color:var(--brown); font-size:1.8rem; }.season-grid { grid-template-columns:repeat(3,1fr); }
 }
@@ -124,7 +133,9 @@ h1,h2,h3,p { margin-top:0; }
   .announcement { justify-content:flex-start; gap:28px; overflow:hidden; white-space:nowrap; font-size:.66rem; }
   .announcement span:nth-child(1) { display:none; }
   .header-inner { height:68px; }
-  .brand { width:116px; height:60px; }
+  .brand { width:156px; height:60px; gap:6px; }
+  .brand-rainbow { font-size:1.55rem; }
+  .brand-name { font-size:1.38rem; }
   .main-nav { position:absolute; left:14px; right:14px; top:68px; display:none; padding:18px; border:1px solid var(--line); border-radius:18px; background:#fff; box-shadow:var(--shadow); flex-direction:column; align-items:stretch; gap:2px; }
   .main-nav.is-open { display:flex; }
   .main-nav a { padding:11px 8px; }
@@ -136,7 +147,7 @@ h1,h2,h3,p { margin-top:0; }
 }
 @media (max-width:760px) {
   .shell,.header-inner { width:min(100% - 28px,1180px); }.announcement { justify-content:flex-start; gap:28px; overflow:hidden; white-space:nowrap; font-size:.66rem; }.announcement span:nth-child(1) { display:none; }
-  .header-inner { height:68px; }.brand { width:116px; height:60px; }.main-nav { position:absolute; left:14px; right:14px; top:68px; display:none; padding:18px; border:1px solid var(--line); border-radius:18px; background:#fff; box-shadow:var(--shadow); flex-direction:column; align-items:stretch; gap:2px; }.main-nav.is-open { display:flex; }.main-nav a { padding:11px 8px; }.main-nav a::after { display:none; }.header-actions { margin-left:auto; }.menu-button { display:block; }.catalog-button { padding:10px 15px; font-size:.75rem; }.text-link { display:none; }
+  .header-inner { height:68px; }.brand { width:156px; height:60px; gap:6px; }.brand-rainbow { font-size:1.55rem; }.brand-name { font-size:1.38rem; }.main-nav { position:absolute; left:14px; right:14px; top:68px; display:none; padding:18px; border:1px solid var(--line); border-radius:18px; background:#fff; box-shadow:var(--shadow); flex-direction:column; align-items:stretch; gap:2px; }.main-nav.is-open { display:flex; }.main-nav a { padding:11px 8px; }.main-nav a::after { display:none; }.header-actions { margin-left:auto; }.menu-button { display:block; }.catalog-button { padding:10px 15px; font-size:.75rem; }.text-link { display:none; }
   .hero { min-height:640px; align-items:flex-start; background-image:linear-gradient(180deg,rgba(255,250,247,.98) 0%,rgba(255,250,247,.88) 35%,rgba(255,250,247,.02) 55%),url('/assets/hero-principal.webp'); background-size:auto 100%; background-position:62% center; }.hero-copy { width:100%; padding:52px 0 0; }.hero h1 { width:min(92%,470px); font-size:clamp(3rem,14vw,4rem); }.hero-lead { width:min(83%,430px); font-size:.96rem; }.hero-actions { flex-wrap:wrap; margin-top:21px; }.hero-actions a { padding:11px 18px; font-size:.82rem; }
   .trust-strip { margin-top:-25px; padding:10px; border-radius:20px; gap:0; }.trust-item { padding:11px 8px; }.trust-item>span { width:38px; height:38px; }.trust-item h2 { font-size:.96rem; }.trust-item p { display:none; }.trust-item:nth-child(3) { border-top:1px solid var(--line); }.trust-item:nth-child(4) { border-top:1px solid var(--line); }
   .section { padding:68px 0; }.section-heading { margin-bottom:26px; }.section-heading h2,.about-copy h2,.contact-card h2 { font-size:2.35rem; }.category-grid { grid-template-columns:repeat(2,1fr); gap:10px; }.category-card { border-radius:18px; }.steps { grid-template-columns:repeat(2,1fr); gap:10px; }.steps article { min-height:175px; padding:20px; }.work-grid { grid-template-columns:repeat(2,1fr); grid-auto-rows:160px; }.work-1,.work-4 { grid-row:auto; }.work-2 { grid-column:auto; }.work-card span { font-size:.78rem; }
